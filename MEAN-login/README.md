@@ -1,0 +1,2 @@
+# MEAN Login App
+A boilerplate for a MEANstack (MongoDB, Express, AngularJs, Node) login system I developed while working on [Camover](https://github.com/crashspringfield/camover). For a better example of how I handle RESTful APIs (this was a learning process), checkout [the bookmarking site]() I wrote with MERN (React-Redux instead of AngularJs)

@@ -1,0 +1,67 @@
+<html ng-app="loginApp">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngluarJs Login Example</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../node_modules/components-font-awesome/css/font-awesome.css"/>
+    <link rel="sylesheet" href="../node_modules/angular-ui-bootstrap/ui-bootrap-csp.css" />
+    <link rel="stylesheet" href="./app/css/style.css"/>
+  </head>
+
+  <body ng-controller="authCtrl as main">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a href="/" class="navbar-brand">Social Whatever Site</a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+              <li class="right" ng-if="!main.loggedIn"><a ui-sref="login">login</a></li>
+              <li class="right" ng-if="!main.loggedIn"><a ui-sref="register">register</a></li>
+              <li class="right" ng-if="main.loggedIn"><a ui-sref="logout" ng-click="main.doLogout()">logout</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Page Content -->
+    <div class=container>
+      <div ui-view></div>
+    </div>
+
+
+  </body>
+    <!-- libraries -->
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <!-- app -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <!-- user -->
+    <script src="app/user/user.module.js"></script>
+    <script src="app/user/register/register.module.js"></script>
+    <script src="app/user/register/register.controller.js"></script>
+    <script src="app/user/register/register.service.js"></script>
+    <script src="app/user/auth/auth.module.js"></script>
+    <script src="app/user/auth/auth.controller.js"></script>
+    <script src="app/user/auth/auth.service.js"></script>
+</html>
