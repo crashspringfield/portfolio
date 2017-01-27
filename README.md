@@ -33,3 +33,8 @@ An example front-end news site using React, Webpack, ES6, and JSX
 A simple AF To Do app using React-Flux.
 
     npm install && npm run dev
+    
+## Github Profile Battle
+A simple React app (using ES5/JSX) that takes 2 Github profiles, makes an API requests, compares the returned stats, and ranks on the winner.
+
+    npm install && npm start
